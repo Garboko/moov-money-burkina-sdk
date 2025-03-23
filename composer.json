@@ -1,0 +1,42 @@
+{
+    "name": "viimlab/moov-money-sdk",
+    "description": "SDK PHP officiel pour l'intégration de l'API de paiement mobile Moov Money",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Viimlab",
+            "email": "contact@viimlab.com",
+            "homepage": "https://viimlab.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.4",
+        "guzzlehttp/guzzle": "^7.0",
+        "ext-json": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.0",
+        "mockery/mockery": "^1.4",
+        "squizlabs/php_codesniffer": "^3.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "MoovMoney\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MoovMoney\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "check-style": "phpcs src",
+        "fix-style": "phpcbf src"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "stable"
+}
