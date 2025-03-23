@@ -1,13 +1,13 @@
 {
-    "name": "viimlab/moov-money-sdk",
-    "description": "SDK PHP officiel pour l'intégration de l'API de paiement mobile Moov Money",
+    "name": "garboko/moov-money-burkina-sdk",
+    "description": "SDK PHP officiel pour l'intégration de l'API de paiement mobile Moov Money Burkina Faso",
     "type": "library",
     "license": "MIT",
     "authors": [
         {
-            "name": "Viimlab",
-            "email": "contact@viimlab.com",
-            "homepage": "https://viimlab.com"
+            "name": "Garboko",
+            "email": "aimezongo2@gmail.com",
+            "homepage": "https://github.com/Garboko"
         }
     ],
     "require": {
