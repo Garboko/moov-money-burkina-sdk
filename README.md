@@ -2,9 +2,9 @@
 
 SDK PHP officiel pour l'intégration des API de paiement mobile Moov Money.
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/garboko/moov-money-burkina-sdk.svg?style=flat-square)](https://packagist.org/packages/garboko/moov-money-burkina-sdk)
-[![Tests](https://img.shields.io/github/actions/workflow/status/garboko/moov-money-burkina-sdk/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/garboko/moov-money-burkina-sdk/actions/workflows/run-tests.yml)
-[![Total Downloads](https://img.shields.io/packagist/dt/garboko/moov-money-burkina-sdk.svg?style=flat-square)](https://packagist.org/packages/garboko/moov-money-burkina-sdk)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/garboko/moov-money-sdk.svg?style=flat-square)](https://packagist.org/packages/garboko/moov-money-sdk)
+[![Tests](https://img.shields.io/github/actions/workflow/status/garboko/moov-money-sdk/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/garboko/moov-money-sdk/actions/workflows/run-tests.yml)
+[![Total Downloads](https://img.shields.io/packagist/dt/garboko/moov-money-sdk.svg?style=flat-square)](https://packagist.org/packages/garboko/moov-money-sdk)
 
 Ce SDK facilite l'intégration avec l'API de paiement mobile Moov Money dans vos applications PHP et gère automatiquement:
 - L'authentification et la sécurité des requêtes
@@ -17,13 +17,13 @@ Ce SDK facilite l'intégration avec l'API de paiement mobile Moov Money dans vos
 ### Composer
 
 ```bash
-composer require garboko/moov-money-burkina-sdk
+composer require garboko/moov-money-sdk
 ```
 
 ### Git
 
 ```bash
-git clone https://github.com/Garboko/moov-money-burkina-sdk.git
+git clone https://github.com/Garboko/moov-money-sdk.git
 ```
 
 ## Configuration

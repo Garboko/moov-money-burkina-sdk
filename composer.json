@@ -1,6 +1,6 @@
 {
-    "name": "garboko/moov-money-burkina-sdk",
-    "description": "SDK PHP officiel pour l'intégration de l'API de paiement mobile Moov Money Burkina Faso",
+    "name": "garboko/moov-money-sdk",
+    "description": "SDK PHP pour l'intégration de l'API de paiement mobile Moov Money",
     "type": "library",
     "license": "MIT",
     "authors": [
