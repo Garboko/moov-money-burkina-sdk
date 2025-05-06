@@ -112,10 +112,14 @@ try {
 ```php
 try {
     // Transfert simple vers un autre compte
-    $response = $client->cashTransfers()->transfer(
+   $response = $client->cashTransfers()->transfer(
         '22662356789',     // Numéro du destinataire (qui sera crédité)
-        500,               // Montant
-        'Remboursement'    // Description
+        500,               // Montant à transférer (devise locale)
+        'Remboursement',   // Description qui apparaîtra sur le relevé
+        [],                // Données étendues (optionnel)
+        null,              // ID de requête personnalisé (optionnel)
+        '22601234561',     // Numéro de l'expéditeur (obligatoire)
+        0000               // Code d'authentification (PIN, obligatoire)
     );
     
     if ($response['status'] === '0') {
@@ -133,9 +137,13 @@ try {
 ```php
 try {
     $response = $client->cashTransfers()->crossBorderTransfer(
-        '22662356789',        // Numéro du destinataire international
-        1000,                 // Montant
-        'Transfert international'
+        '22962356789',           // Numéro du destinataire international
+        1000,                    // Montant à transférer
+        'Transfert international', // Description
+        [],                      // Données étendues (optionnel)
+        null,                    // ID de requête personnalisé (optionnel)
+        '22601234561',           // Numéro de l'expéditeur (obligatoire)
+        0000                     // Code d'authentification (PIN, obligatoire)
     );
     
     if ($response['status'] === '0') {
