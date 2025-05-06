@@ -23,7 +23,7 @@ composer require viimlab/moov-money-sdk
 ### Git
 
 ```bash
-git clone https://github.com/Ibrahimzongo/moov-money-burkina-sdk.git
+git clone https://github.com/Ibrahimzongo/moov-money-sdk.git
 ```
 
 ## Configuration
