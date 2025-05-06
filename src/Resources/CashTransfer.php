@@ -26,23 +26,30 @@ class CashTransfer extends AbstractResource
         float $amount,
         string $remarks,
         array $extendedData = [],
-        ?string $requestId = null
+        ?string $requestId = null,
+        string $sender,
+        int $auth 
     ): array {
-        // Validation
         $this->validator->validatePhoneNumber($msisdn);
         $this->validator->validateAmount($amount);
         
-        // Données de la requête
         $data = [
             'request-id' => $requestId ?? $this->generateRequestId('CashTransfer-'),
+            "command-id" => "WCASH",
+            "sender" => $sender,
             'destination' => $msisdn,
+            'auth' => $auth,
             'amount' => $amount,
             'remarks' => $remarks,
         ];
         
-        // Ajoute les données étendues
         if (!empty($extendedData)) {
             $data['extended-data'] = $extendedData;
+        }else{
+            $data['extended-data'] = [
+                'custommessge' => 'Transfert d\'argent',
+                'ext2' => 'Transfert d\'argent',
+            ];
         }
         
         return $this->httpClient->post('transfer-api-transaction', $data);
@@ -65,23 +72,30 @@ class CashTransfer extends AbstractResource
         float $amount,
         string $remarks,
         array $extendedData = [],
-        ?string $requestId = null
+        ?string $requestId = null,
+        string $sender,
+        int $auth 
     ): array {
-        // Validation
         $this->validator->validatePhoneNumber($msisdn);
         $this->validator->validateAmount($amount);
         
-        // Données de la requête
         $data = [
             'request-id' => $requestId ?? $this->generateRequestId('XCashTransfer-'),
+            "command-id" => "WCASH",
+            "sender" => $sender,
             'destination' => $msisdn,
+            'auth' => $auth,
             'amount' => $amount,
             'remarks' => $remarks,
         ];
         
-        // Ajoute les données étendues
         if (!empty($extendedData)) {
             $data['extended-data'] = $extendedData;
+        }else{
+            $data['extended-data'] = [
+                'custommessge' => 'Transfert d\'argent',
+                'ext2' => 'Transfert d\'argent',
+            ];
         }
         
         return $this->httpClient->post('xcash-api-transaction', $data);
